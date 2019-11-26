@@ -1,95 +1,36 @@
 ---
-title: "Stratégies pour les projets de gestion de contenus structurés en headless"
+title: "Stratégies pour les projets headless avec des systèmes structurés de gestion de contenu"
 date: 2019-06-02T14:35:30+02:00
 draft: true
+source:
+  url: https://www.smashingmagazine.com/2018/11/structured-content-done-right/
+  title: Strategies For Headless Projects With Structured Content Management Systems
+  author: Knut Melvær
 ---
 
-L'utilisation d'une système de gestion de contenus structurés (SCMS) est un excellent moyen d'affranchir vos contenus d'un paradigme qui a fait son temps.
-Dans cet article Knut Melvaer suggère quelques stratégies globales, ainsi que de vrais exemples concrets
-Using a Structured Content Management System (SCMS) can be a great way to free your content from a paradigm that begins to feel its age. In this article, Knut Melvær suggests some overarching strategies, with some concrete real-world examples on how to think about working with structured content.
+L'utilisation d'un système de gestion de contenu structuré (SCMS) peut être un excellent moyen de libérer votre contenu d'un paradigme qui commence à dater. Dans cet article, Knut Melvær suggère quelques stratégies globales, avec quelques exemples concrets issus du monde réel sur la façon de travailler avec un contenu structuré.
 
-This is the guide I wish I had the last couple of years when running
-projects with headless Content Management Systems (CMSs). I've been a
-developer, a user-experience and technology consultant, a project
-manager, information architect, and an author. The different hats have
-made me realize that even if we've had so-called "headless" CMSs for a
-while now, there's still a way to go about thinking how to use them
-best.
+Ceci est le guide que j'aurais aimé avoir ces deux dernières années lorsque j'ai dû géré des projets avec des systèmes de gestion de contenu (CMS) headless. J'ai été développeur, consultant en expérience utilisateur et en technologie, chef de projet, architecte de l'information et auteur. Ces différents chapeaux m'ont fait réaliser que même si nous avons depuis un certain temps des CMS dits "headless", il y a encore du chemin à faire pour réfléchir à la meilleure façon de les utiliser.
 
-We are now at a place where many of us rely on JavaScript frameworks for
-frontend work, using design systems made of components and compositions,
-rather than just implementing flat page layouts. There's a lot of
-traction towards the [JAMstacks](https://jamstack.org/) and
-isomorphic/universal apps that run both on the server and the client.
-The final piece of the puzzle then is how we manage all the content.
+Nous nous trouvons maintenant dans une situation où beaucoup d'entre nous comptent sur les frameworks JavaScript pour effectuer le travail côté client, en utilisant des systèmes de conception faits de composants et de compositions, plutôt que de simplement implémenter des mises en page à plat. Il y a beaucoup de traction vers la [JAMstack](https://jamstack.org/) et les applications isomorphes/universelles qui s'exécutent à la fois sur le serveur et sur le client. La dernière pièce du puzzle est donc la façon dont nous gérons tout le contenu.
 
-Traditional CMSs are adding APIs to serve content through network
-requests and the JSON format. In addition, "headless" CMSs have emerged
-to exclusively serve content through APIs. My argument in this article
-though, is that **we should spend less time talking about "headless",
-and more about "structured content"**. Because that is the essential
-quality of these systems. There are lots of implications for our craft
-implied by these systems, and we still have a way to go in terms of
-figuring out the good patterns of how we should deal with these
-technologies.
+Les CMS traditionnels ajoutent des API pour servir du contenu à travers des requêtes réseau et le format JSON. En outre, les CMS headless ont émergé pour servir exclusivement le contenu par le biais d'API. Mon propos dans cet article, cependant, est que **nous devrions passer moins de temps à parler de "headless", et davantage de "contenu structuré"**. Parce que c'est la qualité essentielle de ces systèmes. Ces systèmes ont de nombreuses implications pour notre métier, et nous avons encore du chemin à faire pour déterminer les bons modèles de la façon dont nous devrions utiliser ces outils.
 
-Coming to technology consulting from a background in humanities, I have
-learned a lot about how to organize and work with web projects that take
-a content-centric approach --- both with the newer API-based as well as
-the traditional CMSs. I have come to appreciate how getting started
-early with actual live content from a CMS; doing so in a
-cross-disciplinary setting has not only made it possible to uncover
-complexities at an earlier stage but also lends agency to everyone
-involved, and gives opportunities to reflect on the challenges and
-possibilities of technology and design in its broadest sense.
+J'ai travaillé comme consultant technologique après une formation en sciences humaines, j'ai beaucoup appris sur la façon d'organiser et de travailler sur des projets Web qui adoptent une approche centrée sur le contenu - à la fois avec avec les CMS récents basés sur des APIs ainsi qu'avec les CMS traditionnels. J'en suis venu à apprécier le fait de commencer à travailler très tôt avec du vrai contenu inséré directement dans un CMS ; le fait de le faire dans un cadre interdisciplinaire a non seulement permis de déceler les complexités à un stade plus précoce, mais aussi de rendre service à toutes les personnes concernées et de donner l'occasion de réfléchir aux défis et aux possibilités de la technologie et du design au sens le plus large du terme.
 
-In this article, I'll suggest some overarching strategies, with some
-concrete, real-world examples on how to think about working with
-structured content. At the time of writing, I have just started working
-for a SaaS company that provides such a content management service, for
-hosting content delivered over APIs. I will make references to it, both
-because of my past experience with it in projects I was involved in as a
-consultant, but also because I think it aptly illustrates the points I
-want to make. So consider this a disclaimer of sorts.
+Dans cet article, je vais suggérer quelques stratégies globales, avec quelques  exemples concrets sur la façon de travailler avec du contenu structuré. Au moment d'écrire ces lignes, je viens de commencer à travailler pour une société qui développe un <abbr title="Software as a Service">SaaS</a> qui fournit un tel service de gestion de contenu : l'hébergement de contenu fourni par l'intermédiaire d'API. J'y ferai référence, à la fois en raison de mon expérience passée dans le cadre de projets auxquels j'ai participé en tant que consultant mais aussi parce que je pense que ça illustre bien les points que je veux faire comprendre. Considérez donc ceci comme une sorte d'avertissement.
 
-That being said, I have been thinking about writing this article for a
-couple of years, and I have strived to make it applicable to whatever
-platform you choose to go with. So without further ado, let's jump
-twenty years back in time in order to understand a bit more where we are
-today.
+Cela dit, j'envisage de rédiger cet article depuis quelques années, et je me suis efforcé de le rendre applicable quelque soit la plateforme que vous choisirez d'utiliser. Alors sans plus attendre, remontons vingt ans en arrière pour comprendre un peu mieux comment nous en sommes arrivés là.
 
-#### First Moves With Web Standards
+#### Premiers pas avec les standards du Web
 
-In the early 2000s, the Web Standards movement inspired a field to
-change their ways of working. From a "layout-first" approach, they
-directed our attention towards how content on a page should be marked up
-*semantically* using HTML: A website's menu isn't a `<table>`, it's a
-`<nav>`; A heading is not a `<b>`, it's an `<h1>`. It was a significant
-step towards thinking about the different roles content web plays in
-order to help users find, identify and take it in.
+Au début des années 2000, le mouvement des standards Web a incité un secteur à changer ses méthodes de travail. D'une approche "mise en page avant tout", ils ont orienté notre attention vers la façon dont le contenu d'une page devrait être balisé *sémantiquement* à l'aide de HTML: Une menu de site web n'est pas une `<table>`, c'est une `<nav>`; un titre n'est pas un `<b>`, c'est un `<h1>`. Ce fût une avancée significative pour faire comprendre les différents rôles que joue le contenu Web dans le fait d'aider les utilisateurs à le trouver, à l'identifier et à l'assimiler.
 
-The Web Standards movement introduced the argument that semantic markup
-improved accessibility, which also improved its ranking in the Google
-search results. It also marked **a shift in how we thought about web
-content**. Your website wasn't longer the *only* place your content was
-represented. You also had to think about how your web pages were
-presented in other visual contexts, like in search results or screen
-readers. This was later fueled by social media and embedded previews of
-shared links. The mindset shifted from how the content should *look*, to
-what it should *mean*. This also happens to be the key to working with
-structured content.
+Le mouvement des standards Web a introduit l'argument selon lequel le balisage sémantique améliorait l'accessibilité, ce qui améliore également son classement dans les résultats de recherche Google. Il a également marqué **un changement dans notre façon de penser le contenu Web**. Votre site Web n'était plus le *seul* endroit où votre contenu était représenté. Vous deviez également réfléchir à la façon dont vos pages Web étaient présentées dans d'autres contextes visuels, comme les résultats de recherche ou les lecteurs d'écran. Cela a par la suite été alimenté par les médias sociaux et les aperçus intégrés de liens partagés. L'état d'esprit est passé de la façon dont le contenu devrait *être perçu* à ce qu'il devrait *signifier*. C'est aussi la clé pour travailler avec un contenu structuré.
 
-With the adoption of pocket-size devices connected to the Internet, the
-web suddenly got a serious contender in apps. The competition, however,
-was mostly for the eyeballs of the end user. Many organizations still
-needed to distribute information about their products and services in
-both their apps and their different web presences. Concurrently, the web
-matured, and JavaScript and AJAX made it easier to connect different
-sources of content through APIs. Today, we have GraphQL and tooling that
-make content fetching and state management simpler. And so the bits of
-the technological puzzle begin to fall into place.
+Avec l'adoption d'appareils de poche connectés à Internet, le web trouve soudain un sérieux concurrent en terme d'applications. La concurrence, cependant, s'adressait surtout aux yeux de l'utilisateur final. De nombreuses organisations avaient encore besoin de diffuser des informations sur leurs produits et services à la fois dans leurs applications et dans leurs différentes présences sur le Web. Parallèlement, le Web a mûri, et JavaScript et AJAX ont facilité la connexion de différentes sources de contenu par le biais d'API. Aujourd'hui, nous avons GraphQL et des outils qui simplifient la récupération de contenu ainsi que la gestion des états. Les morceaux du puzzle technologique commencent donc à se mettre en place.
 
-#### "Create Once, Publish Everywhere"
+#### "Créez une fois, publiez partout"
 
 Though it's mostly described as a "technological shift", the embedding
 of content in JSON payloads (traveling along HTTP tubes) has an outsized
