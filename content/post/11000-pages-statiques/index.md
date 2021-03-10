@@ -1,7 +1,7 @@
 ---
 title: "Un site statique de 11 000 pages, c'est possible ?"
 description: "Les sites statiques pour un site de média c'est l'idéal. Rapide, léger, sécurisé, tout semble coller sur le papier. Mais est-il possible de créer un site statique avec un grand nombre de pages ?"
-date: 2021-03-09 14:00:00
+date: 2021-03-10 14:00:00
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:G%C3%A9n%C3%A9rer%20un%20site%20statique%20de%2011%20000%20pages/jamstatic/twitter-card.png
 author: patrickF
@@ -36,10 +36,12 @@ On s'oriente donc sur deux solutions qui offrent la possibilité de fonctionner 
 
 Gastby aurait pu être utilisé aussi grâce à la nouvelle route API mais nous souhaitons conserver des process de build assez rapide. D'expérience, je connais bien Gatsby et je sais qu'il est le moins performant — ce POC précède l'annonce de la version 3.0 annoncée comme plus rapide.
 
+Pour être totalement honnête, l'article sur [les comparaisons des temps de compilations](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/) a aussi fait pencher la balance. 
+
 {{< notice info >}}
 ### Next.js
 
-[Next.js](https://nextjs.org/) est un framework JavaScript basé sur React. Il permet de générer des applications React sous 3 modes de rendu : SSR (rendu serveur), hybride (statique dynamique) et 100% statique (export des pages sous forme HTML)  
+[Next.js](https://nextjs.org/) est un framework JavaScript basé sur **React**. Il permet de générer des applications React sous 3 modes de rendu : SSR (rendu serveur), hybride (statique dynamique) et 100% statique (export des pages sous forme HTML)  
 Uniquement dans le mode hybride, il offre les fonctionnalités suivantes : le mode preview (prévisualiser des pages non générées), la regénération statique incrémental (la (re)génération de page existante ou non, sous forme de fichier statique).
 
 {{< /notice >}}
@@ -47,7 +49,7 @@ Uniquement dans le mode hybride, il offre les fonctionnalités suivantes : le mo
 {{< notice info >}}
 ### Nuxt.js
 
-Nuxt.js est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous 3 modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des HTML).
+[Nuxt.js](https://nuxtjs.org/) est un framework JavaScript basé sur **Vue.js**. Il permet de générer des applications Vue.js sous 3 modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des HTML).
 Il propose également un système de preview, mais dans le mode 100% statique. À ce jour, il ne propose pas de système de génération de page dynamique comme Next.js.  
 
 Rien de confirmé pour le moment, mais la version 3 de Nuxt.js devrait proposer une fonctionnalité équivalente.
