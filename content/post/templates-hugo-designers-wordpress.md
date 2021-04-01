@@ -1,7 +1,8 @@
 ---
 title: Les templates Hugo pour les designers WordPress
 description: Découvrons les bases du générateur de site Hugo en le comparant à son ancêtre gbien connu WordPress.
-date: "2017-10-01 13:45:36 +0200"
+date: 2017-10-01 13:45:36 +0200
+author: frank
 source:
   author: Leon Barnard
   title: Hugo Templates for WordPress Designers
@@ -380,12 +381,15 @@ moins envie d’en savoir un peu plus.
   trouver des réponses à vos questions et déboguer votre code.
 
 - [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+
   - 23 vidéos !
 
 - [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en)
+
   - Un bon endroit pour commencer à jouer.
 
 - [D'autres thèmes pour Hugo](https://themes.gohugo.io/)
+
   - pour que vous n'ayez pas à commencer de zéro.
 
 - [Un des nombreux billets de blog sur le passage de WordPress à Hugo](https://blog.philipphauer.de/moving-wordpress-hugo/).

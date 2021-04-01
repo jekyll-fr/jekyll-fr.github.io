@@ -3,6 +3,8 @@ title: La Jamstack n'est rapide que si vous y veillez
 description: Pour en finir avec l'incompréhension selon laquelle votre site statique doit forcément utiliser du JavaScript et des APIs.
 date: 2020-10-05
 author: arnaud
+excerpt: |
+  [Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%2520Jamstack%2520n'est%2520rapide%2520que%2520si%2520vous%2520y%2520veillez/jamstatic/twitter-card.png
 categories:
@@ -14,11 +16,6 @@ source:
   lang: en
 canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
 typora-root-url: ../../static
----
-{{< intro >}}
-[Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !
-{{< /intro >}}
-
 ---
 
 La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide[^1] pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter ce workflow". Mais trop de sites Jamstack sont encore trop lents.

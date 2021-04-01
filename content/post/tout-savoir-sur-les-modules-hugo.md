@@ -1,6 +1,7 @@
 ---
 title: "Tout ce que vous devez savoir sur les modules Hugo"
 description: "Les modules Hugo permettent d'utiliser des fichiers stockés dans n'importe quel dépôt Git dans vos projets."
+author: frank
 date: 2020-09-05T13:55:22+02:00
 lastmod: 2020-09-05T13:55:22+02:00
 categories:
@@ -19,7 +20,7 @@ Cet article vous propose de vous mettre la main à la pâte et après avoir vu c
 
 ### Initialiser votre projet en tant que module
 
-{{< notice info >}}
+{{< notice >}}
 
 #### Tout est module
 
@@ -90,7 +91,7 @@ Une fois le montage effectué, nous pouvons accéder aux icônes SVG situées da
 
 ```go-html-template
 {{ with resources.Get "icons/cart.svg" }}
-  <div class="fill-current w-4">
+  <div class="w-4 fill-current">
     {{ .Content | safeHTML }}
   </div>
 {{ end }}

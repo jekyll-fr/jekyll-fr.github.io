@@ -2,6 +2,7 @@
 title: "Les startups de l’écosystème Jamstack"
 description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la Jamstack."
 date: 2018-05-31T20:21:08+02:00
+author: frank
 categories:
   - jamstack
 images:
@@ -112,7 +113,7 @@ pour la recherche par exemple. La partie CMS reste critique et des CMS headless
 marketing et les développeurs. Avec un process de travail basé sur Git, il est
 bien plus simple de mettre à jour un site ou une application, on peut déployer à
 partir de GitHub, s'assurer que le contenu est à jour, revenir à une version
-précédente et   identifier l'origine des anomalies.
+précédente et identifier l'origine des anomalies.
 
 ## Et ensuite ?
 
@@ -131,7 +132,7 @@ Angular s'accompagne d'un changement de paradigme vers le développement basé s
 des composants et Storybook est au cœur de ce mouvement » — Zoltan Olah, CEO de
 [Chroma](https://www.chromaticqa.com/).
 
-**Des services pour le frontend** : des plate-formes comme [Zeit](https://zeit.co/)
+**Des services pour le frontend** : des plate-formes comme [Vercel](https://vercel.com/)
 et Netlify sont en train d'émerger, elles permettent de s'affranchir du temps et
 de la difficulté des différents processus de génération de site, de compilation
 des assets, de déploiement et de publication continue sur les serveurs
